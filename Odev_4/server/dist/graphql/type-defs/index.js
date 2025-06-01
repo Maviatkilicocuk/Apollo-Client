@@ -1,0 +1,3 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;var _path=_interopRequireDefault(require("path"));var _loadFiles=require("@graphql-tools/load-files");var _merge=require("@graphql-tools/merge");function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}/* const path = require('path');
+const { loadFilesSync } = require('@graphql-tools/load-files');
+const { mergeTypeDefs } = require('@graphql-tools/merge'); */var typesArray=(0,_loadFiles.loadFilesSync)(_path["default"].join(__dirname),{extensions:["graphql"]});var _default=exports["default"]=(0,_merge.mergeTypeDefs)(typesArray);
