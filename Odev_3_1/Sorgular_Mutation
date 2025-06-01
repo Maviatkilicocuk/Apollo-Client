@@ -1,0 +1,181 @@
+# 👤 USER MUTATIONS
+
+# Create User
+mutation CreateUser {
+  createUser(data: {
+    username: "Strawberry6",
+    email: "strawberry6@gmail.com"
+  }) {
+    id
+    username
+  }
+}
+
+# Update User
+mutation UpdateUser {
+  updateUser(id: "1", data: {
+    username: "UpdatedStrawberry6",
+    email: "updated6@gmail.com"
+  }) {
+    id
+    username
+  }
+}
+
+# Delete User
+mutation DeleteUser {
+  deleteUser(id: "1") {
+    id
+    username
+  }
+}
+
+# Delete All Users
+mutation DeleteAllUsers {
+  deleteAllUsers {
+    count
+  }
+}
+
+
+# 📍 LOCATION MUTATIONS
+
+# Create Location
+mutation CreateLocation {
+  createLocation(data: {
+    name: "Lake Casandra",
+    desc: "The glorious nectarine comes from a sensitive alligator. An apple is the sheep of a seal! A kumquat is a bee's kitten? Few can name an amusing spider that isn't a dynamic duck. In ancient times their crocodile was, in this moment, an elated elephant? Those hamsters are nothing more than pomegranates.",
+    lat: -67.6213,
+    lng: -40.0738
+  }) {
+    id
+    name
+  }
+}
+
+# Update Location
+mutation UpdateLocation {
+  updateLocation(id: "1", data: {
+    name: "Updated Lake Casandra",
+    desc: "Updated description.",
+    lat: -60.0000,
+    lng: -40.0000
+  }) {
+    id
+    name
+  }
+}
+
+# Delete Location
+mutation DeleteLocation {
+  deleteLocation(id: "1") {
+    id
+    name
+  }
+}
+
+# Delete All Locations
+mutation DeleteAllLocations {
+  deleteAllLocations {
+    count
+  }
+}
+
+
+# 🎫 EVENT MUTATIONS
+
+# Create Event
+mutation CreateEvent {
+  createEvent(data: {
+    title: "Poker night",
+    desc: "The dynamic kitten reveals itself as a self-confident horse to those who look! Draped neatly on a hanger...",
+    date: "2019-09-12",
+    from: "11:00",
+    to: "12:00",
+    location_id: "1",
+    user_id: "1"
+  }) {
+    id
+    title
+  }
+}
+
+# Update Event
+mutation UpdateEvent {
+  updateEvent(id: "1", data: {
+    title: "Updated Poker Night",
+    desc: "Updated description for Poker Night.",
+    date: "2019-09-13",
+    from: "13:00",
+    to: "14:00",
+    location_id: "1",
+    user_id: "1"
+  }) {
+    id
+    title
+  }
+}
+
+# Delete Event
+mutation DeleteEvent {
+  deleteEvent(id: "1") {
+    id
+    title
+  }
+}
+
+# Delete All Events
+mutation DeleteAllEvents {
+  deleteAllEvents {
+    count
+  }
+}
+
+
+# 👥 PARTICIPANT MUTATIONS
+
+# Create Participant
+mutation CreateParticipant {
+  createParticipant(data: {
+    user_id: "1",
+    event_id: "1"
+  }) {
+    id
+    user {
+      username
+    }
+    event {
+      title
+    }
+  }
+}
+
+# Update Participant
+mutation UpdateParticipant {
+  updateParticipant(id: "1", data: {
+    user_id: "1",
+    event_id: "1"
+  }) {
+    id
+    user {
+      username
+    }
+    event {
+      title
+    }
+  }
+}
+
+# Delete Participant
+mutation DeleteParticipant {
+  deleteParticipant(id: "1") {
+    id
+  }
+}
+
+# Delete All Participants
+mutation DeleteAllParticipants {
+  deleteAllParticipants {
+    count
+  }
+}
