@@ -1,0 +1,134 @@
+# Yeni bir kullanıcı oluşturulduğunda
+subscription UserCreated{
+  userCreated {
+    id
+    username
+    email
+  }
+}
+
+# Bir kullanıcı güncellendiğinde
+subscription UserUpdated{
+  userUpdated {
+    id
+    username
+    email
+  }
+}
+
+# Bir kullanıcı silindiğinde
+subscription UserDeleted{
+  userDeleted {
+    id
+    username
+    email
+  }
+}
+
+# Kullanıcı sayısı değiştiğinde
+subscription UserCount{
+  userCount
+}
+
+# Yeni bir event oluşturulduğunda
+subscription EventCreated{
+  eventCreated {
+    id
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+# Bir event güncellendiğinde
+subscription EventUpdated{
+  eventUpdated {
+    id
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+# Bir event silindiğinde
+subscription EventDeleted{
+  eventDeleted {
+    id
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+# Yeni bir konum eklendiğinde
+subscription LocationCreated{
+  locationCreated {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+# Bir konum güncellendiğinde
+subscription LocationUpdated{
+  locationUpdated {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+# Bir konum silindiğinde
+subscription LocationDeleted{
+  locationDeleted {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+# Yeni bir katılımcı eklendiğinde
+subscription ParticipantCreated{
+  participantCreated {
+    id
+    user_id
+    event_id
+  }
+}
+
+# Katılımcı bilgisi güncellendiğinde
+subscription ParticipantUpdated{
+  participantUpdated {
+    id
+    user_id
+    event_id
+  }
+}
+
+# Katılımcı silindiğinde
+subscription ParticipantDeleted{
+  participantDeleted {
+    id
+    user_id
+    event_id
+  }
+}
+
