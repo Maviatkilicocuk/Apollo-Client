@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.Location=void 0;var Location=exports.Location={events:function(_events){function events(_x){return _events.apply(this,arguments)}events.toString=function(){return _events.toString()};return events}(function(parent){return events.filter(function(event){return event.location_id==parent.id})})};

@@ -1,0 +1,43 @@
+type User {
+  _id: ID!
+  username: String!
+  email: String!
+  profile_photo: String
+
+  # Relations
+  events: [Event!]!
+  locations: [Location!]!
+  participants: [Participant!]!
+}
+
+input CreateUserInput {
+  username: String!
+  email: String!
+  profile_photo: String
+}
+
+input UpdateUserInput {
+  username: String
+  email: String
+  profile_photo: String
+}
+
+type Query {
+  users: [User!]!
+  user(_id: ID!): User
+}
+
+type Mutation {
+  createUser(data: CreateUserInput!): User!
+  updateUser(_id: ID!, data: UpdateUserInput!): User!
+  deleteUser(_id: ID!): User!
+  deleteAllUser: DeleteAllOutput!
+}
+
+type Subscription {
+  userCreated(id: ID): User!
+  userUpdated: User!
+  userDeleted: User!
+  userCount: Int!
+}
+

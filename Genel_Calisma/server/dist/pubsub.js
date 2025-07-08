@@ -1,0 +1,5 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;var _graphqlRedisSubscriptions=require("graphql-redis-subscriptions");var _ioredis=_interopRequireDefault(require("ioredis"));var _dotenv=_interopRequireDefault(require("dotenv"));function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}/* const { RedisPubSub } = require('graphql-redis-subscriptions');
+const Redis = require ('ioredis');
+
+const dotenv = require ('dotenv');
+dotenv.config(); */_dotenv["default"].config();var options={host:process.env.REDIS_HOST,port:process.env.REDIS_PORT,password:process.env.REDIS_PASS,tls:{},retryStrategy:function retryStrategy(times){return Math.min(times*50,200)}};var pubsub=new _graphqlRedisSubscriptions.RedisPubSub({publisher:new _ioredis["default"](options),subscriber:new _ioredis["default"](options)});var _default=exports["default"]=pubsub;

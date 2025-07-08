@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.counterUser{
+    color: #d6d5d5;
+    font-size: 32px;
+}

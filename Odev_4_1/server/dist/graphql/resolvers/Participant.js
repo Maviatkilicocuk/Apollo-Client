@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.Participant=void 0;var Participant=exports.Participant={user:function user(parent){return users.find(function(user){return user.id==parent.user_id})},event:function event(parent){return events.find(function(event){return event.id==parent.event_id})}};
